@@ -28,7 +28,16 @@ public class Client {
       // TODO: Add a loop that writes "Hello Server" to the Server
       // and then read from the server until the Server writes back Goodbye. 
       // Print whatever the Server writes, including the terminating String.
-
+      int i = 5
+      while(i < 5){
+    	  output.write("Hello Server");
+    	  
+    	  String serverString = (String) input.readObject();
+    	  System.out(serverString);
+    	  
+    	  i++;
+      }
+      
       
       // Close the connection to the server
       server.close();
