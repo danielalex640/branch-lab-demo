@@ -29,6 +29,12 @@ public class Server {
       // write backs "Hello Client".  Write back Goodbye to terminate
       // both the client and server.  Print whatever the Client writes.
       
+      output.writeObject("Hello Client");
+      for (int i = 0; i < 5; i++) {
+    	  String message = input.readObject();
+    	  System.out.println(message);
+      }
+      output.writeObject("Goodbye");
       
       // Close the connection
       connection.close();
